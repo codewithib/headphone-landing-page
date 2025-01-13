@@ -1,0 +1,636 @@
+/* importing my fonts starts here */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(../../src/fonts/SourceSansPro-Bold.otf);
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(../../src/fonts/SourceSansPro-Regular.otf);
+    font-weight: 400;
+}
+/* importing my fonts ends here */
+
+/* Adding my fonts and colors to CSS variables starts here */
+:root {
+    --btn-color: #FF6565;
+    --polygon-color: #FF6565;
+    --footer-bg-color: #071629;
+    --font: 'Source Sans Pro', sans-serif;
+    --font-color-white: #ffffff;
+    --font-color-black: #071629;
+    --font-bold: bold;
+    --font-normal: normal;
+}
+/* Adding my fonts and colors to CSS variables ends here */
+
+/* General Reset to my CSS starts here */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html, body {
+    font-family: var(--font), sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+button {
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 95%;
+    padding: 0 20px;
+}
+
+/* General Reset to my CSS ends here */
+
+/* Styling of re-usable components starts here */
+.btn {
+    background: var(--btn-color);
+    padding: 13px 31px;
+    border-radius: 22px;
+    color: var(--font-color-white);
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);
+    text-align: center;
+    display: inline-block;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #000;
+}
+/* Styling of re-usable components ends here */
+
+/* Header section styling starts here */
+header {
+    background: url(../../src/asset/headphones_hero_1.jpg) no-repeat center center/cover;
+    min-height: 100vh;
+    color: #ffffff;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(38, 50, 64, 0.9);
+        z-index: 1000;
+        padding: 0 6rem;
+        transition: background-color 0.3s;
+    }
+
+    nav .logo {
+        width: 10rem;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    nav .btn-nav {
+        background: var(--btn-color);
+        padding: 0.5rem 1.3rem;
+        border-radius: 2rem;
+        color: var(--font-color-white);
+        text-decoration: none;
+        font-weight: 700;
+        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);
+        text-align: center;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Styling hamburger mobile icon and setting to none on desktop starts here */
+
+    .hamburger span {
+        display: block;
+        background: #fff;
+        width: 1.56rem;
+        height: 0.188rem;
+        margin: 0.3rem;
+      }
+
+      .hamburger .short-line {
+        width: 1rem;
+      }
+    .hamburger, #menu-toggle {
+        display: none;
+    }
+    /* Styling hamburger mobile icon and setting to none on desktop ends here */
+
+    nav .btn-nav:hover {
+        background-color: #000;
+    }
+
+    .hero {
+        padding: 15rem 0 5rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-weight: 700;
+        font-size: 2.7rem;
+        max-width: 49rem;
+        margin: 0 auto;
+    }
+
+    .hero .short-txt {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+
+    .hero .bottom-txt {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 2;
+        max-width: 58rem;
+        margin: 0 auto;
+    }
+
+    .hero .btn-hero {
+        margin-bottom: 5rem;
+    }
+}
+
+
+/* Header Styles ends here */
+
+/* What we do section styling starts here */
+
+.what-we-do {
+padding: 10rem 0 5rem;
+
+    .top-txt {
+        text-align: center;
+        color: var(--font-color-black);
+        max-width: 58rem;
+        margin: 0 auto 5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 2;
+    }
+
+    .row-card-wrapper {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            font-size: 0.9rem;
+            gap: 3.5rem;
+            max-width: 13rem;
+            flex: 1 1 calc(25% - 3rem);
+        }
+
+        .card-container svg {
+            height: 4rem;
+        }
+    }
+
+}
+/* What we do section styling ends here */
+
+/* Our result section styling starts here */
+.our-result {
+    background-image: url(../../src/asset/headphones_hero_2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10rem 0 5rem;
+
+        .top-txt {
+            text-align: center;
+            color: var(--font-color-white);
+            font-size: 1rem;
+            font-weight: 400;
+            max-width: 58rem;
+            margin: 0 auto 2.5rem;
+            line-height: 2;
+        }
+        .polygons-row-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+        .polygon-box{
+            display: flex;
+            max-width: 12rem;
+            min-height: 12rem;
+            background-image: url(../../src/asset/Polygon.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 calc(25% - 4rem);
+        }
+
+        .polygon-box .polygon-content {
+            text-align: center;
+            color: var(--font-color-white);
+            padding: 0 1rem;
+
+            .number {
+                font-weight: 700;
+                font-size: 2rem;
+                margin-bottom: 0.2rem;
+                margin-top: 0.5rem;
+            }
+
+            .txt {
+                font-weight: 400;
+                font-size: 0.89rem;
+            }
+        }
+    
+}
+/* Our result section styling ends here */
+
+/* Contact us stylinhg starts here */
+
+.contact-us {
+    padding: 4rem 0 2rem;
+    
+    .contact-form {
+        max-width: 42rem;
+        margin: 0 auto;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 3rem;
+
+        .form-group {
+            margin-bottom: 1.5rem;
+
+            input, textarea {
+                width: 100%;
+                padding: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 0.25rem;
+                font-size: 1rem;
+                color: var(--font-color-black);
+                transition: border-color 0.3s;
+            }
+
+            input:focus,
+            textarea:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+                transform: translateX(-1.5rem);
+            }
+
+            textarea:focus {
+                border-width: 2px;
+            }
+
+            textarea {
+                min-height: 8rem;
+                resize: vertical;
+            }
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--font-color-black);
+
+        }
+
+        .btn-form {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            box-shadow: none;
+        }
+    }
+}
+
+/* Footer section styling starts here */
+.footer-section {
+    padding: 6rem 0 2.5rem;
+    background: #071629;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .row .left img {
+        width: 12rem;
+    }
+
+    .row .right {
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .row .right img {
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+    }
+
+    .footer-txt-container {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+
+        .footer-txt {
+            color: var(--font-color-white);
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.3517;
+        }
+
+        .flex-icon {
+            fill: #ffffff;
+            min-width: 1.5rem;
+            opacity: 0.6;
+        }
+           
+    }
+}
+/* Footer section styling ends here */
+
+
+/* Media Queries starts here */
+
+
+/* Tablet Media Quuery starts here */
+@media (max-width: 768px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+    }
+
+    /* Header styling starts here */
+header {
+    min-height: 100vh;
+
+    nav {
+        padding: 0 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+/* Header styling end here */
+
+/* What we do section styling starts here */
+.what-we-do {
+
+  .row-card-wrapper .card-container {
+    flex: 1 1 calc(50% - 3rem);
+  }
+}
+/* What we do section styling starts here */
+
+/* Our result section styling starts here */
+.our-result {
+    
+    .polygons-row-wrapper .polygon-box {
+        flex: 1 1 calc(50% - 4rem);
+    }
+}
+
+/* Our result section styling ends here */
+
+/* Contact form styling starts here */
+.contact-us {
+
+    .contact-form {
+        padding: 2rem;
+
+        .form-group input, textarea {
+            padding: 0.75rem;
+        }
+
+        .btn-form {
+            padding: 0.75rem;
+        }
+    }
+}
+/* Contact form styling ends here */
+
+/* Footer section styling starts here */
+
+.footer-section {
+
+
+    .row .right img {
+        width: 1.85rem;
+        min-height: 1.85rem;
+    }
+
+    .footer-txt-container .footer-txt {
+        font-size: 0.9rem;
+    }
+
+    .footer-txt-container .flex-icon {
+        min-width: 1.3rem;
+    }
+}
+
+/* Footer section styling ends here */
+
+}
+/* Tablet Media Quuery ends here */
+
+/* Mobile Media Query starts here */
+@media (max-width: 480px) {
+    .container {
+        max-width: 480px;
+        margin: 0 auto;
+        width: 90%;
+        padding: 0;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+    }
+
+    header {
+
+        nav {
+            padding: 0 1rem;
+        }
+
+        nav .logo {
+            width: 9.5rem;
+            margin-right: 30%;
+        }
+
+        nav ul {
+            display: none;
+        }
+
+        nav .btn-nav {
+            padding: 0.3rem 0.9rem;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            background-color: rgba(38, 50, 64, 0.9);
+            top: 4.2rem;
+            left: 0;
+            padding: 2rem;
+            gap: 2.5rem;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        nav #menu-toggle:checked ~ ul {
+            display: flex;
+        }
+        
+        .hero {
+            padding: 16rem 0 4rem;
+        }
+
+        .hero h1 {
+            line-height: 1.3;
+            font-size: 2.1rem;
+        }
+
+        .hero .short-txt, .bottom-txt {
+            font-size: 0.9rem;
+        }
+    }
+    
+    .what-we-do {
+
+        .top-txt {
+            font-size: 0.9rem;
+        }
+
+        .row-card-wrapper .card-container {
+            flex: 1 1 calc(100% - 4rem);
+        }
+    }
+
+    .our-result {
+
+        .top-txt {
+            font-size: 0.9rem;
+        }
+
+        .polygons-row-wrapper .polygon-box {
+            flex: 1 1 calc(100% - 4rem);
+        }
+    }
+
+    .contact-us {
+        padding: 1.5rem;
+
+        .form-group input, textarea {
+            padding: 0.6rem;
+        }
+
+        .btn-form {
+            padding: 0.6rem;
+        }
+
+        .contact-form .form-group input:focus,
+        textarea:focus {
+            transform: translateX(-1rem);
+        }
+    }
+
+    .footer-section {
+
+        .row .left img {
+            width: 9.5rem;
+        }
+
+        .row .right img {
+            width: 1.5rem;
+        }
+
+        .footer-txt-container .footer-txt {
+            font-size: 0.8rem;
+        }
+
+        .footer-txt-container .flex-icon {
+            min-width: 1.15rem;
+        }
+
+        .row {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-txt-container {
+            flex-direction: column;
+        }
+    }
+}
+/* Mobile Media Query ends here */
+
+
+/* Media Queries end here */
+

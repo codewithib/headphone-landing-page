@@ -1,0 +1,18 @@
+{
+  "name": "headphone-landing-page",
+  "version": "1.0.0",
+  "description": "Headphones Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss/style.scss:dist/css/style.css",
+    "watch": "sass --watch src/scss/style.scss:dist/css/style.css",
+    "dev": "sass --watch src/scss:dist/css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.1"
+  }
+}
