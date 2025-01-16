@@ -9,6 +9,7 @@
     "watch": "sass --watch src/scss/style.scss:dist/css/style.css",
     "dev": "sass --watch src/scss:dist/css --style=compressed"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
