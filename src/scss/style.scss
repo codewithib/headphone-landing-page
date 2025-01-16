@@ -78,11 +78,18 @@ button {
     text-align: center;
     display: inline-block;
     border: none;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
     background-color: #000;
+    transform: scale(1.1);
 }
+
+/* Button Keyframes starts here */
+
+
+/* Button Keyframes ends here */
 /* Styling of re-usable components ends here */
 
 /* Header section styling starts here */
@@ -123,6 +130,12 @@ header {
         color: inherit;
         font-weight: 700;
         font-size: 0.9rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    nav ul li a:hover {
+        transform: scale(1.1);
     }
 
     nav .btn-nav {
@@ -137,6 +150,7 @@ header {
         display: inline-block;
         border: none;
         cursor: pointer;
+        transition: all 0.3s ease;
     }
 
     /* Styling hamburger mobile icon and setting to none on desktop starts here */
@@ -159,6 +173,7 @@ header {
 
     nav .btn-nav:hover {
         background-color: #000;
+        transform: scale(1.1);
     }
 
     .hero {
@@ -227,6 +242,20 @@ padding: 10rem 0 5rem;
             flex: 1 1 calc(25% - 3rem);
         }
 
+        .card-container:hover {
+            animation: scale 3s infinite;
+        }
+
+        @keyframes scale {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+        }
+
         .card-container svg {
             height: 4rem;
         }
@@ -269,6 +298,20 @@ padding: 10rem 0 5rem;
             justify-content: center;
             align-items: center;
             flex: 1 1 calc(25% - 4rem);
+        }
+
+        .polygon-box:hover {
+            animation: scale 3s infinite;
+        }
+
+        @keyframes scale {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
         }
 
         .polygon-box .polygon-content {
@@ -542,6 +585,21 @@ header {
             gap: 2.5rem;
             text-align: center;
             transition: background-color 0.3s;
+            animation: scale-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        @keyframes scale-in {
+            0% {
+                transform: scaleX(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scaleX(1);
+                opacity: 1;
+            }
+
+
         }
 
         nav #menu-toggle:checked ~ ul {
@@ -560,6 +618,8 @@ header {
         .hero .short-txt, .bottom-txt {
             font-size: 0.9rem;
         }
+
+
     }
     
     .what-we-do {
