@@ -5,15 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/scss/style.scss:dist/css/style.css",
-    "watch": "sass --watch src/scss/style.scss:dist/css/style.css",
-    "dev": "sass --watch src/scss:dist/css --style=compressed"
+    "build": "sass src/scss/style.scss:css/style.css",
+    "watch": "sass --watch src/scss/style.scss:css/style.css",
+    "dev": "sass --watch src/scss:css --style=expanded"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.83.1"
+    "sass": "^1.83.4"
   }
 }
